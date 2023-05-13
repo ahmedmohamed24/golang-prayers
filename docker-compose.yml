@@ -21,22 +21,23 @@ services:
   db:
     image: postgres
     restart: always
+    container_name: 'database'
     environment:
-      POSTGRES_PASSWORD: password 
+      POSTGRES_PASSWORD: password
       POSTGRES_USER: root
       POSTGRES_DB: azan
     volumes:
-      - db-data:/var/lib/postgresql/data
+      - ./database:/var/lib/postgresql/data
     ports:
       - "5432:5432"
     networks:
       - go
   redis:
     container_name: 'redis'
+    volumes:
+      - ./redis:/data
     image: redis:latest
     ports:
       - "6379:6379"
     networks:
       - go
-volumes:
-  db-data:
