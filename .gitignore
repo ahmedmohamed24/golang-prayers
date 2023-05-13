@@ -2,3 +2,4 @@ data/**
 mongo/**
 redis/**
 database/**
+./database
