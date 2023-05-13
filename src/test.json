@@ -1,0 +1,25 @@
+{
+    "place_id": 67966587,
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "osm_type": "node",
+    "osm_id": 6362185590,
+    "lat": "30.4630631",
+    "lon": "31.1811277",
+    "display_name": "صيرفة اوسكار, Saad Zaghloul Street, Banha, Al Qalyubiya, 13511, Egypt",
+    "address": {
+        "amenity": "صيرفة اوسكار",
+        "road": "Saad Zaghloul Street",
+        "city": "Banha",
+        "state": "Al Qalyubiya",
+        "ISO3166-2-lvl4": "EG-KB",
+        "postcode": "13511",
+        "country": "Egypt",
+        "country_code": "eg"
+    },
+    "boundingbox": [
+        "30.4630131",
+        "30.4631131",
+        "31.1810777",
+        "31.1811777"
+    ]
+}

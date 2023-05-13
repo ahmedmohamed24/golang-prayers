@@ -1,0 +1,42 @@
+version: "3"
+
+networks:
+  go:
+
+
+services:
+  go-docker-image:
+    container_name: 'backend'
+    build:
+      context: .
+      dockerfile: go.dockerfile
+    ports:
+      - "80:80"
+    volumes:
+      - ./src:/app
+    depends_on:
+      - db
+    networks:
+      - go
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: password 
+      POSTGRES_USER: root
+      POSTGRES_DB: azan
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - go
+  redis:
+    container_name: 'redis'
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    networks:
+      - go
+volumes:
+  db-data:
